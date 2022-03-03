@@ -1,0 +1,194 @@
+application {
+  config {
+    baseName prospectService
+    applicationType gateway
+    packageName ai.maxdrive.prospect.service
+    authenticationType jwt
+    prodDatabaseType postgresql
+    clientFramework react
+    databaseType sql
+    serverPort 8080
+    devDatabaseType postgresql
+    dtoSuffix DTO
+    enableSwaggerCodegen true
+    entitySuffix Entity
+    languages [en, fr]
+    messageBroker kafka
+    nativeLanguage en
+    prodDatabaseType postgresql
+    serviceDiscoveryType eureka
+    testFrameworks [protractor, cucumber, gatling]
+  }
+  entities *
+}
+
+enum Gender {
+  Male
+  Female
+  Others
+}
+
+entity Prospect {
+	prospectiveId String required
+	lastName String
+    firstName String
+    otherNames String
+    dateOfBirth Date
+    gender Gender
+    email String
+    phone String
+    alternatePhone String
+    disabilities String
+    bvn String
+    bvnAddress String
+    isBvnVerified Boolean
+    bvnInformation String
+    driversLicenseNumber String
+    driversLicenseExpiry Date
+    dateAvailableForTest Date //** figure out a better name
+    photoUrl String
+    noShowCount Long
+    activated Boolean //** Is this required?
+    inRecovery Boolean //** Is this required?
+    retrain Boolean //** Is this required?
+    // assetId String //** Is this required?
+    createdAt Instant
+    updatedAt Instant
+}
+
+
+// Can one guarantor stand in for multiple prospects???
+entity Guarantor {
+	lastName String
+    firstName String
+    otherNames String
+    gender Gender
+    email String
+    phone String
+    alternatePhone String
+    bvn String
+    createdAt Instant
+    updatedAt Instant
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Call {
+	agent String
+	prospect String
+	comment String
+    createdAt Instant
+}
+
+entity Agent {
+	role String required
+    lastName String
+    firstName String
+    code String
+    status String
+    dateEnrolled Date
+    //** Consider whether it makes more sense to have these here or calculated on the fly
+    registeredProspects Long /**Getter property */
+    activatedProspects Long /**Getter property */
+    inPipeline Long /**Getter property */
+    lastRegistration Date /**Getter property */
+    //** 
+    createdAt Instant
+    updatedAt Instant
+}
+
+/**
+ * OnboardingStage entity.
+ * @author Abiola Aluko
+ * @modified by Oyin
+ */
+entity OnboardingStage {
+	name String
+	description String
+    rank Long
+    createdAt Instant
+    updatedAt Instant
+}
+
+entity ProspectStageHistory {
+    name String
+	createdAt Instant
+}
+
+/**
+ * OnboardingStage entity.
+ * @author Abiola Aluko with modifications from Oyin
+ */
+entity ProspectStageEventSourcing {
+    createdAt Instant
+    propsectId String
+    event String
+    payload String
+}
+
+entity EntryChannel {
+	name String
+    description String
+    createdAt Instant
+	updatedAt Instant
+}
+
+entity Address {
+	number Long
+    street String
+    city String
+    state String
+    countryName String //** Considering refactoring into a seperate country entity
+    countryCode String //** Considering refactoring into a seperate country entity
+    createdAt Instant
+	updatedAt Instant
+}
+
+entity Location {
+	name String
+    description String
+    createdAt Instant
+	updatedAt Instant
+}
+
+entity AssetType {
+	name String
+    description String
+    createdAt Instant
+	updatedAt Instant
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    Agent to Call{Agent(id)}
+    Prospect to Call {Prospect(id)}
+    Prospect to ProspectStageHistory {Prospect(id)}
+}
+
+// defining multiple OneToOne relationships with comments
+relationship OneToOne {
+    Prospect{Address} to Address
+    Agent {Address(id)} to Address
+    Guarantor {Adress(id)} to Address
+    ProspectStageHistory {fromStage} to OnboardingStage
+    ProspectStageHistory {toStage} to OnboardingStage
+}
+
+// defining multiple ManyToOne relationships with comments
+relationship ManyToOne {
+    Prospect{OnboardingStage} to OnboardingStage
+    Prospect{Location} to Location
+    Prospect{Agent} to Agent
+	Prospect{EntryChannel} to EntryChannel
+}
+
+// defining multiple ManyToMany relationships with comments
+relationship ManyToMany {
+    Prospect{AssetType} to AssetType {prospect}
+}
+
+// Set pagination options
+paginate ProspectStageHistory with infinite-scroll
+paginate Prospect, Agent with pagination
+
+
