@@ -1,0 +1,28 @@
+{
+  "prospectServiceApp": {
+    "onboardingStage": {
+      "home": {
+        "title": "OnboardingStages",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Onboarding Stage",
+        "createOrEditLabel": "Créer ou éditer un Onboarding Stage",
+        "notFound": "Aucun Onboarding Stage trouvé"
+      },
+      "created": "Un nouveau Onboarding Stage a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Onboarding Stage avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Onboarding Stage avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Onboarding Stage {{ id }} ?"
+      },
+      "detail": {
+        "title": "Onboarding Stage"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "rank": "Rank",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At"
+    }
+  }
+}

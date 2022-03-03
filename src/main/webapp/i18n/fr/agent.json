@@ -1,0 +1,43 @@
+{
+  "prospectServiceApp": {
+    "agent": {
+      "home": {
+        "title": "Agents",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Agent",
+        "createOrEditLabel": "Créer ou éditer un Agent",
+        "notFound": "Aucun Agent trouvé"
+      },
+      "created": "Un nouveau Agent a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Agent avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Agent avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Agent {{ id }} ?"
+      },
+      "detail": {
+        "title": "Agent"
+      },
+      "id": "ID",
+      "role": "Role",
+      "lastName": "Last Name",
+      "firstName": "First Name",
+      "code": "Code",
+      "status": "Status",
+      "dateEnrolled": "Date Enrolled",
+      "registeredProspects": "Registered Prospects",
+      "activatedProspects": "Activated Prospects",
+      "inPipeline": "In Pipeline",
+      "lastRegistration": "Last Registration",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "address": "Address",
+      "call": "Call",
+      "help": {
+        "registeredProspects": "Getter property",
+        "activatedProspects": "Getter property",
+        "inPipeline": "Getter property",
+        "lastRegistration": "Getter property"
+      }
+    }
+  }
+}

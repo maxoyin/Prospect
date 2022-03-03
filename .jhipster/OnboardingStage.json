@@ -1,0 +1,38 @@
+{
+  "name": "OnboardingStage",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rank",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [],
+  "javadoc": "OnboardingStage entity.\\n@author Abiola Aluko\\n@modified by Oyin",
+  "entityTableName": "onboarding_stage",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220303051318"
+}

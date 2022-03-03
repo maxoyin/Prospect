@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  prospectservice-app:
+    build: ../../..
+    container_name: prospectservice-app
+    environment:
+    ports:
+      - 8080:8080

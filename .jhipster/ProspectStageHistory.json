@@ -1,0 +1,46 @@
+{
+  "name": "ProspectStageHistory",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "onboardingStage",
+      "otherEntityRelationshipName": "prospectStageHistory",
+      "relationshipName": "fromStage",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "onboardingStage",
+      "otherEntityRelationshipName": "prospectStageHistory",
+      "relationshipName": "toStage",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "prospect",
+      "otherEntityRelationshipName": "prospectStageHistory",
+      "relationshipName": "prospect"
+    }
+  ],
+  "entityTableName": "prospect_stage_history",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220303051418"
+}

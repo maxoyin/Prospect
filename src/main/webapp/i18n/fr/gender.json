@@ -1,0 +1,10 @@
+{
+  "prospectServiceApp": {
+    "Gender": {
+      "null": "",
+      "Male": "Male",
+      "Female": "Female",
+      "Others": "Others"
+    }
+  }
+}

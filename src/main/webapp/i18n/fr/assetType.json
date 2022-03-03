@@ -1,0 +1,28 @@
+{
+  "prospectServiceApp": {
+    "assetType": {
+      "home": {
+        "title": "AssetTypes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Asset Type",
+        "createOrEditLabel": "Créer ou éditer un Asset Type",
+        "notFound": "Aucun Asset Type trouvé"
+      },
+      "created": "Un nouveau Asset Type a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Asset Type avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Asset Type avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Asset Type {{ id }} ?"
+      },
+      "detail": {
+        "title": "Asset Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "prospect": "Prospect"
+    }
+  }
+}

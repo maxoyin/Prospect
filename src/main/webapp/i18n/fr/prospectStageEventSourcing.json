@@ -1,0 +1,27 @@
+{
+  "prospectServiceApp": {
+    "prospectStageEventSourcing": {
+      "home": {
+        "title": "ProspectStageEventSourcings",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Prospect Stage Event Sourcing",
+        "createOrEditLabel": "Créer ou éditer un Prospect Stage Event Sourcing",
+        "notFound": "Aucun Prospect Stage Event Sourcing trouvé"
+      },
+      "created": "Un nouveau Prospect Stage Event Sourcing a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Prospect Stage Event Sourcing avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Prospect Stage Event Sourcing avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Prospect Stage Event Sourcing {{ id }} ?"
+      },
+      "detail": {
+        "title": "Prospect Stage Event Sourcing"
+      },
+      "id": "ID",
+      "createdAt": "Created At",
+      "propsectId": "Propsect Id",
+      "event": "Event",
+      "payload": "Payload"
+    }
+  }
+}

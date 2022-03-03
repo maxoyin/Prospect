@@ -1,0 +1,28 @@
+{
+  "prospectServiceApp": {
+    "prospectStageHistory": {
+      "home": {
+        "title": "Prospect Stage Histories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Prospect Stage History",
+        "createOrEditLabel": "Create or edit a Prospect Stage History",
+        "notFound": "No Prospect Stage Histories found"
+      },
+      "created": "A new Prospect Stage History is created with identifier {{ param }}",
+      "updated": "A Prospect Stage History is updated with identifier {{ param }}",
+      "deleted": "A Prospect Stage History is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Prospect Stage History {{ id }}?"
+      },
+      "detail": {
+        "title": "Prospect Stage History"
+      },
+      "id": "ID",
+      "name": "Name",
+      "createdAt": "Created At",
+      "fromStage": "From Stage",
+      "toStage": "To Stage",
+      "prospect": "Prospect"
+    }
+  }
+}

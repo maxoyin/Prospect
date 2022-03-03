@@ -1,0 +1,28 @@
+{
+  "prospectServiceApp": {
+    "onboardingStage": {
+      "home": {
+        "title": "Onboarding Stages",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Onboarding Stage",
+        "createOrEditLabel": "Create or edit a Onboarding Stage",
+        "notFound": "No Onboarding Stages found"
+      },
+      "created": "A new Onboarding Stage is created with identifier {{ param }}",
+      "updated": "A Onboarding Stage is updated with identifier {{ param }}",
+      "deleted": "A Onboarding Stage is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Onboarding Stage {{ id }}?"
+      },
+      "detail": {
+        "title": "Onboarding Stage"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "rank": "Rank",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "prospectServiceApp": {
+    "entryChannel": {
+      "home": {
+        "title": "Entry Channels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Entry Channel",
+        "createOrEditLabel": "Create or edit a Entry Channel",
+        "notFound": "No Entry Channels found"
+      },
+      "created": "A new Entry Channel is created with identifier {{ param }}",
+      "updated": "A Entry Channel is updated with identifier {{ param }}",
+      "deleted": "A Entry Channel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Entry Channel {{ id }}?"
+      },
+      "detail": {
+        "title": "Entry Channel"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At"
+    }
+  }
+}

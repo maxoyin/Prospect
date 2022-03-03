@@ -1,0 +1,166 @@
+{
+  "name": "Prospect",
+  "fields": [
+    {
+      "fieldName": "prospectiveId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "otherNames",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateOfBirth",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "Gender",
+      "fieldValues": "Male,Female,Others"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "alternatePhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "disabilities",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bvn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bvnAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isBvnVerified",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "bvnInformation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "driversLicenseNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "driversLicenseExpiry",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dateAvailableForTest",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "photoUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "noShowCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "activated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "inRecovery",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "retrain",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "address",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "call",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "call"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "prospectStageHistory",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "prospectStageHistory"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "onboardingStage",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "onboardingStage"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "location"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "agent",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "agent"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "entryChannel",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "entryChannel"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "assetType",
+      "otherEntityRelationshipName": "prospect",
+      "relationshipName": "assetType",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "prospect",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220303050918"
+}

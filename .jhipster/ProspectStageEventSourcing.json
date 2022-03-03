@@ -1,0 +1,34 @@
+{
+  "name": "ProspectStageEventSourcing",
+  "fields": [
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "propsectId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "event",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payload",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "javadoc": "OnboardingStage entity.\\n@author Abiola Aluko with modifications from Oyin",
+  "entityTableName": "prospect_stage_event_sourcing",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220303051518"
+}

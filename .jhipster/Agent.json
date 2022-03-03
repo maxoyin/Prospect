@@ -1,0 +1,84 @@
+{
+  "name": "Agent",
+  "fields": [
+    {
+      "fieldName": "role",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateEnrolled",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "registeredProspects",
+      "fieldType": "Integer",
+      "javadoc": "Getter property"
+    },
+    {
+      "fieldName": "activatedProspects",
+      "fieldType": "Integer",
+      "javadoc": "Getter property"
+    },
+    {
+      "fieldName": "inPipeline",
+      "fieldType": "Integer",
+      "javadoc": "Getter property"
+    },
+    {
+      "fieldName": "lastRegistration",
+      "fieldType": "Instant",
+      "javadoc": "Getter property"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "agent",
+      "relationshipName": "address",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "call",
+      "otherEntityRelationshipName": "agent",
+      "relationshipName": "call"
+    }
+  ],
+  "entityTableName": "agent",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220303051218"
+}

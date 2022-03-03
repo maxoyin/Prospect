@@ -1,0 +1,28 @@
+{
+  "prospectServiceApp": {
+    "prospectStageHistory": {
+      "home": {
+        "title": "ProspectStageHistories",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Prospect Stage History",
+        "createOrEditLabel": "Créer ou éditer un Prospect Stage History",
+        "notFound": "Aucun Prospect Stage History trouvé"
+      },
+      "created": "Un nouveau Prospect Stage History a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Prospect Stage History avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Prospect Stage History avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Prospect Stage History {{ id }} ?"
+      },
+      "detail": {
+        "title": "Prospect Stage History"
+      },
+      "id": "ID",
+      "name": "Name",
+      "createdAt": "Created At",
+      "fromStage": "From Stage",
+      "toStage": "To Stage",
+      "prospect": "Prospect"
+    }
+  }
+}

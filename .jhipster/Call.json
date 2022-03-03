@@ -1,0 +1,39 @@
+{
+  "name": "Call",
+  "fields": [
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "agent",
+      "otherEntityRelationshipName": "call",
+      "relationshipName": "agent"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "prospect",
+      "otherEntityRelationshipName": "call",
+      "relationshipName": "prospect"
+    }
+  ],
+  "javadoc": "not an ignored comment",
+  "entityTableName": "call",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220303051118"
+}
